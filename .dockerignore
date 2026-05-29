@@ -1,0 +1,8 @@
+docs/
+*.db
+*.csv
+dataset/
+__pycache__/
+*.pyc
+.git/
+.env

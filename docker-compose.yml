@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-attendance:latest
+    container_name: ai-attendance-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./dataset:/app/dataset
+      - ./attendance.db:/app/attendance.db
+      - ./attendance.csv:/app/attendance.csv
+    restart: unless-stopped
